@@ -1,0 +1,275 @@
+    *{
+        font-family: "Zalando Sans Expanded", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #e8e8e8;
+    }
+    header{
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 15px;
+        background-color: #3c47df;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 8px;
+    }
+    .textHeader{
+        font-size: 25px;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .inputNome {
+        padding: 5px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+    }
+    .textHeader{
+        font-family: "Zalando Sans Expanded", sans-serif;
+        color: #e8e8e8;
+    }
+    input {
+        width: 230px;
+        background-color: #e8e8e8;
+        padding: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        border-radius: 15px;
+        transition: 0.2s ease;
+    }
+    
+    input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px #007bff80;
+    }
+    .btnPart{
+        background-color: #007bff;
+        color: #e8e8e8;
+        text-align: center;
+        width: 230px;
+        padding: 8px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+    .btnPart:hover{
+        letter-spacing: 1px;
+    }
+    #iconeAdd{
+       margin-right: 2px;
+    }
+    #nomeEvento{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        font-size: 28px;
+        text-align: center;
+        color: #000000c0;
+    }
+    .removerEvento {
+        background: transparent;
+        border: none;
+        color: #ff0000;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    #listaParticipantes {
+        display: flex;
+        justify-content: center; /* centraliza horizontal */
+        align-items: center;
+        flex-wrap: wrap; /* quebra linha se tiver muitos */
+        cursor: pointer;
+        gap: 10px;
+    }
+    .participante {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        gap: 8px;
+        background: #3c47df;
+        color: #ffffff;
+        padding: 8px 12px;
+        border-radius: 15px;
+        cursor: grab;
+        user-select: none;
+    }
+    .participante:active {
+        cursor: grabbing;
+    }
+    /* ==========================
+   MODAL
+========================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    max-width: 90%;
+    text-align: center;
+    border: 3px solid #3c47df;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    color: #3c47df;
+    margin-bottom: 15px;
+}
+
+#inputParticipante {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar,
+.btn-confirmar {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #e8e8e8;
+}
+
+.btn-confirmar {
+    background: #3c47df;
+    color: white;
+}
+
+    .remover {
+        background: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .boxPalco{
+        margin-top: 20px;
+        background-color: #e8e8e8;
+        min-height: 65vh;
+        height: auto;
+        margin: 15px;
+        justify-content: center;
+        border: 3px solid #3c47df;
+        border-radius: 15px;
+        position: relative; /* MUITO IMPORTANTE */
+        overflow: hidden;   /* evita sair do palco */
+    }
+    .textPalco {
+        position: absolute;
+        bottom: 10px; /* fica embaixo */
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        color: #000;
+        opacity: 0.6;
+        pointer-events: none;
+        user-select: none;
+    }
+    .textForm {
+        position: absolute;
+        top: 10px; /* agora fica em cima */
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        color: #000;
+        opacity: 0.6;
+        pointer-events: none;
+        user-select: none;
+    }
+    .footer {
+        background-color: #e8e8e8;
+        color: #000000c0;
+        text-align: center;
+        padding: 12px;
+        margin-top: 70px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+    @media (max-width: 768px) {
+
+        header {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 15px;
+            gap: 8px;
+        }
+        .textHeader{
+            font-size: 20px;
+        }
+        #nomeEvento{
+            font-size: 20px;
+        }
+    
+        .menu {
+            width: 100%;
+            justify-content: center;
+        }
+    
+        input,
+        .btnPart {
+            width: 100%;
+        }
+    
+        .boxPalco {
+            min-height: 60vh;
+        }
+    
+        .participante {
+            font-size: 9px;
+            padding: 3px 5px;
+        }
+        .removerEvento{
+            margin-top: -5px;
+        }
+    }
+  
